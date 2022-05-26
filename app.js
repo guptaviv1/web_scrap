@@ -23,12 +23,12 @@ function webScrap (pagesToScrape) {
                     let items = document.querySelectorAll('#srp-jobList .job-apply-card');
                     items.forEach((item) => {
                         results.push({
-                            job_title:  item.querySelector('.job-tittle h3 a').innerText,
-                            company_name: item.querySelector('.company-name a').innerText,
-                            location: item.querySelectorAll('.searctag .loc')[0].innerText,
-                            years_of_exp_req:  item.querySelectorAll('.searctag .loc')[1].innerText,
-                            salary:  item.querySelectorAll('.searctag .loc')[2].innerText,
-                            post_time: item.querySelector('.posted-update .posted').innerText
+                            job_title:  item.querySelector('.job-tittle h3 a') ? item.querySelector('.job-tittle h3 a').innerText : 'NA',
+                            company_name: item.querySelector('.company-name a') ? item.querySelector('.job-tittle h3 a').innerText : 'NA',
+                            location: item.querySelectorAll('.searctag .loc')[0] ? item.querySelector('.job-tittle h3 a').innerText : 'NA',
+                            years_of_exp_req:  item.querySelectorAll('.searctag .loc')[1] ? item.querySelectorAll('.searctag .loc')[1].innerText : 'NA',
+                            salary:  item.querySelectorAll('.searctag .loc')[2] ?item.querySelectorAll('.searctag .loc')[2].innerText : 'NA',
+                            post_time: item.querySelector('.posted-update .posted')? item.querySelector('.posted-update .posted').innerText : 'NA'
                         });
                     });
                     return results;
@@ -50,7 +50,7 @@ function webScrap (pagesToScrape) {
         }
     })
 }
-webScrap(2).then(console.log).catch(console.error);
+webScrap(5).then(console.log).catch(console.error);
 
 
 app.listen(port, () => {
