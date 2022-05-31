@@ -1,10 +1,10 @@
 # web_scrap
-## Intall all dependecy using `npm install`
-## Need to install redis server on local machine to run this application
-## Run the application using `npm run start`
-## API route - http:localhost:3000/nodejs parameter are location, page, pageItem
+### Intall all dependecy using `npm install`
+### Need to install redis server on local machine to run this application
+### Run the application using `npm run start`
+### API route - http:localhost:3000/nodejs parameters are location, page, pageItem
 
-## Example of data response - localhost:3000/nodejs?location=Bengaluru&page=4
+### Example of data response - localhost:3000/nodejs?location=Bengaluru&page=4
 
 {
     "error": false,
